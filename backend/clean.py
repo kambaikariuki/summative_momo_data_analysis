@@ -72,10 +72,7 @@ def organize():
                     categories['cash_power'].append(line)
                     logged += 1
                 elif "Yello!" in line:
-                    if "Mins" in line:
-                        categories['airtime_bill'].append(line)
-                    else:
-                        categories['bundle_purchase'].append(line)
+                    categories['other'].append(line)
                     logged += 1
                 elif "revers" in line:
                     categories['reversals'].append(line)
@@ -93,3 +90,4 @@ def organize():
     print(f"Successfully logged {logged} messages, {unlogged} others saved in other.txt")
 
 
+organize()
