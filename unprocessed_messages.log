@@ -1,0 +1,2 @@
+2025-02-10 11:33:19,971 - INFO - Unprocessed message: {'address': 'M-Money', 'date': 1717691653000, 'body': 'Some body content', 'status': -1, 'read': 0}
+2025-02-10 11:33:24,549 - INFO - Unprocessed message: {'address': 'M-Money', 'date': 1717691653000, 'body': 'Some body content', 'status': -1, 'read': 0}
