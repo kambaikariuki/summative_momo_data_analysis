@@ -1,0 +1,5 @@
+*143*R*Y'ello, the transaction with amount 14200 RWF for ESICIA LTD with message: 1734874172692585358074144 failed at 2024-09-21 15:49:01 .Please Contact MobileMoney HelpLine for Assistance.Thank you for using MTN MobileMoney.*EN#
+*143*R*Y'ello, the transaction with amount 11600 RWF for ESICIA LTD with message: 1763055172864732058074359 failed at 2024-10-11 14:00:00 .Please Contact MobileMoney HelpLine for Assistance.Thank you for using MTN MobileMoney.*EN#
+*143*TxId:16803066185*S*Your payment of 5000 RWF to Bundles and Packs with token  has failed at 2024-11-12 23:47:47. Message: - -. *EN#
+*143*TxId:16803076383*S*Your payment of 5000 RWF to Bundles and Packs with token  has failed at 2024-11-12 23:49:39. Message: - -. *EN#
+*143*R*Y'ello, the transaction with amount 5000 RWF for Data Bundle MTN with message:  failed at 2024-11-12 23:58:00 .Please Contact MobileMoney HelpLine for Assistance.Thank you for using MTN MobileMoney.*EN#

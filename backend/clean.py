@@ -89,5 +89,6 @@ def organize():
 
     print(f"Successfully logged {logged} messages, {unlogged} others saved in other.txt")
 
+get_body()
 
 organize()
