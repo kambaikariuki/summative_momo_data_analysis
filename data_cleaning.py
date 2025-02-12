@@ -7,13 +7,13 @@ pattern = re.compile(
 
 
 with open("Incoming.txt", "r") as file:
-    incoming_text_data = file.read()
+    incoming_data_text = file.read()
 
 
 transactions = []
 
 # Extracting data using the regex pattern
-for match in pattern.finditer(incoming_text_data):
+for match in pattern.finditer(incoming_data_text):
     amount, sender_details, date_time, new_balance, transaction_id = match.groups()
     transactions.append({
         "amount_received": int(amount),
