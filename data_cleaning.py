@@ -14,10 +14,10 @@ transactions = []
 
 # Extracting data using the regex pattern
 for match in pattern.finditer(incoming_text_data):
-    amount, sender, date_time, new_balance, transaction_id = match.groups()
+    amount, sender_details, date_time, new_balance, transaction_id = match.groups()
     transactions.append({
         "amount_received": int(amount),
-        "sender": sender.strip(),
+        "sender_details": sender_details.strip(),
         "date_time": date_time,
         "new_balance": int(new_balance),
         "transaction_id": transaction_id})
