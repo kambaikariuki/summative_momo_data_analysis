@@ -25,7 +25,7 @@ Yello!Umaze kugura 1,000FRW(2200MB) igura 1,000 RWF
 *162*TxId:15204526240*S*Your payment of 90000 RWF to ONAFRIQ MAURITIUS with token  has been completed at 2024-08-10 18:10:04. Fee was 2000 RWF. Your new balance: 9050 RWF . Message: - Transaction has been processed successfully. *EN#
 <#> Dear Customer, your MTN MoMo application one-time password is :2632.MTN MoMo does not recommend that you share or expose your one-time password with anyone. Be Vigilant. RdbS6eMOXvx N/RywfrtIZL>.
 <#> Dear Customer, your MTN MoMo application one-time password is :1827.MTN MoMo does not recommend that you share or expose your one-time password with anyone. Be Vigilant. RdbS6eMOXvx N/RywfrtIZL>.
-1) 2024-08-23 DEPOSIT RWF 25000 Receiver: 250795963036 Sender:  Fee: RWF
+2024-08-23 DEPOSIT RWF 25000 Receiver: 250795963036 Sender:  Fee: RWF
 Yello!Umaze kugura 5,000FRW(7GB) igura 5,000 RWF
 Yello!Umaze kugura 3000Frw=2500Mins+100SMS igura 3,000 RWF
 Yello!Umaze kugura 5,000FRW(7GB) igura 5,000 RWF
