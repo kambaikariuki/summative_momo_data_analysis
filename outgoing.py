@@ -29,7 +29,7 @@ for line in lines:
         })
 
 # Save the extracted data to a JSON file
-with open("test.json", "w", encoding="utf-8") as json_file:
+with open("outgoing.json", "w", encoding="utf-8") as json_file:
     json.dump(transactions, json_file, indent=4)
 
-print("Transactions successfully extracted and saved to outgoing_data.json!")
+print("Transactions successfully extracted and saved to outgoing.json!")

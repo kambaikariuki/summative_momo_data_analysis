@@ -1,0 +1,162 @@
+[
+    {
+        "Amount": "25000",
+        "Receiver": "DIRECT PAYMENT LTD ",
+        "Date": "2024-05-14 21:01:00",
+        "New_Balance": "4060",
+        "Financial_Transaction_Id": "13947831685",
+        "External_Transaction_Id": "47842929"
+    },
+    {
+        "Amount": "600",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-06-06 16:19:01",
+        "New_Balance": "230",
+        "Financial_Transaction_Id": "14262449979",
+        "External_Transaction_Id": "c5e8bfeb-33d8-4eb2-8d22-154e5ff5e310"
+    },
+    {
+        "Amount": "25000",
+        "Receiver": "DIRECT PAYMENT LTD ",
+        "Date": "2024-06-14 07:52:10",
+        "New_Balance": "4750",
+        "Financial_Transaction_Id": "14366722236",
+        "External_Transaction_Id": "48214394"
+    },
+    {
+        "Amount": "8000",
+        "Receiver": "ESICIA LTD KPAY",
+        "Date": "2024-06-15 21:28:58",
+        "New_Balance": "4110",
+        "Financial_Transaction_Id": "14392932831",
+        "External_Transaction_Id": "E39762254KPY1718479727"
+    },
+    {
+        "Amount": "5000",
+        "Receiver": "Future Dynamic  Innovations ltd",
+        "Date": "2024-06-16 19:25:44",
+        "New_Balance": "9350",
+        "Financial_Transaction_Id": "14404189056",
+        "External_Transaction_Id": "475e95b8a1d049c2ba9ee675401d9332"
+    },
+    {
+        "Amount": "20000",
+        "Receiver": "INTOUCH COMMUNICATIONS  LTD",
+        "Date": "2024-06-29 00:32:19",
+        "New_Balance": "21670",
+        "Financial_Transaction_Id": "14574631016",
+        "External_Transaction_Id": "169587820240628223202678996"
+    },
+    {
+        "Amount": "20000",
+        "Receiver": "INTOUCH COMMUNICATIONS  LTD",
+        "Date": "2024-06-29 16:06:06",
+        "New_Balance": "45870",
+        "Financial_Transaction_Id": "14582579702",
+        "External_Transaction_Id": "169710420240629140334182447"
+    },
+    {
+        "Amount": "20000",
+        "Receiver": "INTOUCH COMMUNICATIONS  LTD",
+        "Date": "2024-09-08 01:12:33",
+        "New_Balance": "103260",
+        "Financial_Transaction_Id": "15628862865",
+        "External_Transaction_Id": "188160120240907231214390890"
+    },
+    {
+        "Amount": "10500",
+        "Receiver": "ESICIA LTD KPAY",
+        "Date": "2024-09-15 22:59:03",
+        "New_Balance": "24750",
+        "Financial_Transaction_Id": "15747282067",
+        "External_Transaction_Id": "E42267291KPY1726433927"
+    },
+    {
+        "Amount": "200",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-09-24 18:37:52",
+        "New_Balance": "1180",
+        "Financial_Transaction_Id": "15874896437",
+        "External_Transaction_Id": "68d6367d-f56d-4436-a31f-6f59aeb70ef3"
+    },
+    {
+        "Amount": "13000",
+        "Receiver": "ESICIA LTD KPAY",
+        "Date": "2024-09-28 22:56:50",
+        "New_Balance": "43210",
+        "Financial_Transaction_Id": "15940915096",
+        "External_Transaction_Id": "E42831629KPY1727556993"
+    },
+    {
+        "Amount": "25000",
+        "Receiver": "IREMBO Ltd",
+        "Date": "2024-10-03 17:49:18",
+        "New_Balance": "4012",
+        "Financial_Transaction_Id": "16030998575",
+        "External_Transaction_Id": "881003055321"
+    },
+    {
+        "Amount": "11600",
+        "Receiver": "ESICIA LTD",
+        "Date": "2024-10-11 14:03:20",
+        "New_Balance": "69655",
+        "Financial_Transaction_Id": "16178728333",
+        "External_Transaction_Id": "E43388184PYR1728648034"
+    },
+    {
+        "Amount": "5000",
+        "Receiver": "IREMBO Ltd",
+        "Date": "2024-10-19 11:50:25",
+        "New_Balance": "10750",
+        "Financial_Transaction_Id": "16327063889",
+        "External_Transaction_Id": "881019247301"
+    },
+    {
+        "Amount": "10000",
+        "Receiver": "INTOUCH COMMUNICATIONS  LTD",
+        "Date": "2024-11-02 00:47:43",
+        "New_Balance": "14372",
+        "Financial_Transaction_Id": "16591010120",
+        "External_Transaction_Id": "194832520241101224717179801"
+    },
+    {
+        "Amount": "200",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-11-30 14:39:06",
+        "New_Balance": "79492",
+        "Financial_Transaction_Id": "17149096701",
+        "External_Transaction_Id": "65c28253-1297-4c0d-b38b-8edec42fa2e2"
+    },
+    {
+        "Amount": "300",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-12-02 16:22:35",
+        "New_Balance": "122044",
+        "Financial_Transaction_Id": "17192081844",
+        "External_Transaction_Id": "96218fc3-5668-401b-bf53-4fd66a9e276f"
+    },
+    {
+        "Amount": "400",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-12-03 21:17:17",
+        "New_Balance": "20524",
+        "Financial_Transaction_Id": "17219848993",
+        "External_Transaction_Id": "6ed516b1-6031-4395-9072-b895b96561e7"
+    },
+    {
+        "Amount": "300",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-12-04 18:17:17",
+        "New_Balance": "15124",
+        "Financial_Transaction_Id": "17236283233",
+        "External_Transaction_Id": "2eb6d6d7-83ef-43e8-be2c-79af26d8d3b9"
+    },
+    {
+        "Amount": "900",
+        "Receiver": "INFORMATION TECHNOLOGY  ENGINEERING CONSTRUCTION   ITEC Ltd",
+        "Date": "2024-12-06 19:22:45",
+        "New_Balance": "9124",
+        "Financial_Transaction_Id": "17278839589",
+        "External_Transaction_Id": "9838017e-bba5-4d1f-b7a9-e57bc604e41d"
+    }
+]
