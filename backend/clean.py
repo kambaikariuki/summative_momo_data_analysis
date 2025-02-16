@@ -255,7 +255,7 @@ def to_json():
     with open("backend/json/outgoing.json", "w", encoding="utf-8") as json_file:
         json.dump(transactions, json_file, indent=4)
 
-# Reversals
+# Reversals 
     with open("backend/txt/reversals.txt", "r", encoding="utf-8") as file:
         lines = file.readlines()
 
