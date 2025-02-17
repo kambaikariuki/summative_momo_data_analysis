@@ -57,3 +57,4 @@ CREATE TABLE IF NOT EXISTS Third_party (
     Amount INT,
     Date DATE
 );
+

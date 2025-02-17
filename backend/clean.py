@@ -1,6 +1,14 @@
 import xml.etree.ElementTree as ET
 import re
 import json
+import sqlite3
+import sqlite3
+
+
+conn = sqlite3.connect('transactions.db')
+
+cursor = conn.cursor()
+
 # Parse XML file into Element tree
 
 def get_body():
@@ -104,6 +112,7 @@ def to_json():
     r"\*162\*TxId:(\d+)\*S\*Your payment of ([\d,]+) RWF to Airtime with token .*? has been completed at (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\.")
 
     transactions = []
+    transactions_to_update = []
 
     with open("backend/txt/airtime_bill.txt", "r") as file:
         data = file.read()
@@ -116,9 +125,20 @@ def to_json():
             "amount": int(amount),
             "date_time": date_time
         })
+    
 
     with open("backend/json/airtime_bill.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            (transaction['transaction_id'], 'airtime', transaction['amount'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (transaction_id ,type, amount, date)
+            VALUES (?, ?, ?, ?)
+            ''', transactions_to_insert)
+
+
 
 # Bank Deposit
     pattern = re.compile(
@@ -140,6 +160,14 @@ def to_json():
 
     with open("backend/json/bank_deposit.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            ('bank_deposit', transaction['amount'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (type, amount, date)
+            VALUES (?, ?, ?)
+            ''', transactions_to_insert)
 
 # Bundle purchase
     pattern = re.compile(
@@ -161,6 +189,14 @@ def to_json():
 
     with open("backend/json/bundle_purchase.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            ('bundles', transaction['amount'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (type, amount, date)
+            VALUES (?, ?, ?)
+            ''', transactions_to_insert)
 
 
 # Cash Power
@@ -182,6 +218,14 @@ def to_json():
         
     with open("backend/json/cash_power.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            ('cash power', transaction['amount'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (type, amount, date)
+            VALUES (?, ?, ?)
+            ''', transactions_to_insert)
 
 
 # Code payments
@@ -205,6 +249,14 @@ def to_json():
 
     with open("backend/json/code_payments.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert =[
+            (transaction['transaction_id'], 'code_payment', transaction['amount'], transaction['code_holder'], transaction['code_number'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (transaction_id, type, amount, code_holder, code_number, date)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ''', transactions_to_insert)
 
 # Incoming
     pattern = re.compile(
@@ -219,13 +271,21 @@ def to_json():
         amount, sender_details, date_time, new_balance, transaction_id = match.groups()
         transactions.append({
             "amount_received": int(amount),
-            "sender_details": sender_details.strip(),
+            "sender": sender_details.strip(),
             "date_time": date_time,
             "new_balance": int(new_balance),
             "transaction_id": transaction_id})
 
     with open("backend/json/incoming.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            (transaction['transaction_id'], 'incoming', transaction['amount_received'], transaction["date_time"])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (transaction_id, type, amount, date)
+            VALUES (?, ?, ?, ?)
+            ''', transactions_to_insert)
 
 # Outgoing
     with open("backend/txt/outgoing.txt", "r", encoding="utf-8") as file:
@@ -280,6 +340,15 @@ def to_json():
 
     with open("backend/json/reversals.json", "w", encoding="utf-8") as json_file:
         json.dump(reversals, json_file, indent=4)
+        reversals_to_insert = [
+            ('reversal', reversal['amount'], reversal['receiver'], reversal['date'])
+            for reversal in reversals
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (type, amount, sender, date)
+            VALUES (?, ?, ?, ?)
+            ''', reversals_to_insert)
+                
 
 # Third Party transactions
     with open('backend/txt/third_party.txt', 'r') as file:
@@ -295,11 +364,19 @@ def to_json():
             "Amount": match[0],
             "Receiver": match[1],
             "Date": match[2],
-            "Financial_Transaction_Id": match[3]
+            "transaction_id": match[3]
         }
         transactions.append(transaction)
 
     json_output = json.dumps(transactions, indent=4)
+    transactions_to_insert = [
+        ('third_party', transaction['Amount'], transaction['Receiver'], transaction['Date'], transaction['transaction_id'])
+        for transaction in transactions
+    ]
+    cursor.executemany('''
+        INSERT INTO transactions (type, amount, sender, date, transaction_id)
+        VALUES (?, ?, ?, ?, ?)
+        ''', transactions_to_insert)
 
     with open('backend/json/third_party.json', 'w') as json_file:
         json_file.write(json_output)
@@ -329,6 +406,15 @@ def to_json():
 
     with open("backend/json/withdrawals.json", "w") as json_file:
         json.dump(transactions, json_file, indent=4)
+        transactions_to_insert = [
+            ('incoming', transaction['amount'], transaction['date_time'], transaction['transaction_id'])
+            for transaction in transactions
+        ]
+        cursor.executemany('''
+            INSERT INTO transactions (type, amount, date, transaction_id)
+            VALUES (?, ?, ?, ?)
+            ''', transactions_to_insert)
+    conn.commit()
 
 if __name__ == "__main__":
     get_body()
