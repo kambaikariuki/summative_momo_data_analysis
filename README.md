@@ -1,3 +1,8 @@
+# MoMo Data Analysis - Fullstack Application
+
+This project is a fullstack application designed to process, analyze, and visualize SMS transaction data from MTN MoMo. The application includes a backend for data cleaning and database management, a relational database to store the processed data, and a frontend dashboard for interactive data visualization.
+
+---
 ## *Features*
 
 ### 1. **Data Processing**:
